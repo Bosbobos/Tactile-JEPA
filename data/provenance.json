@@ -1,0 +1,63 @@
+{
+  "version": "2026-09-22",
+  "metrics_source": "User-supplied Tactile-JEPA manuscript, uncommented main and ablation tables. No inference from earlier repository report snapshots.",
+  "geometry": {
+    "xela": [
+      "notebooks/assets/context_visualization/xela_geometry.npz",
+      "tactile_ssl/graph/builders.py:build_physical_graph, bridge_k=4"
+    ],
+    "socks": [
+      "notebooks/assets/context_visualization/sock_physical_sensor_map.csv",
+      "notebooks/assets/context_visualization/sock_physical_graph_4neighbor_edges.csv"
+    ],
+    "deco": [
+      "tactile_ssl/data/deco_geometry.py:build_deco_geometry, bridge_k=4, coarse_graph"
+    ]
+  },
+  "sampling": {
+    "source": "tactile_ssl/utils/jepa_masking.py Dijkstra helper",
+    "illustrative_only": true,
+    "target_ratio": 0.14,
+    "raw_context_ratio": 0.7,
+    "samples_per_mode": 8,
+    "paired_targets": "two targets per part; mixed = one local and one random per part",
+    "connected_context": "sampled independently within each part",
+    "batch_replay": false
+  },
+  "limitations": [
+    "Graphs are repository visualizations and have not been matched to every final checkpoint.",
+    "No recorded signal, video, reconstruction or model prediction is bundled.",
+    "Socks pose metric unit requires review: manuscript says rad but scale needs confirmation.",
+    "DECO main table and ablation report different runs/values; retained separately.",
+    "Spread is reproduced as reported, not relabelled as a confidence interval."
+  ],
+  "figures": {
+    "teaser": {
+      "source": "teaser11.pdf",
+      "render": "images/teaser.png",
+      "original": "images/teaser11.pdf"
+    },
+    "pretraining": {
+      "source": "pretrain2.pdf",
+      "render": "images/pretrain.png",
+      "original": "images/pretrain2.pdf"
+    }
+  },
+  "display_layouts": {
+    "implementation": "layouts.js",
+    "paper_method": "The manuscript uses fixed sensor adjacency for mask sampling, not display coordinates.",
+    "xela": {
+      "spatial": "Saved 3D sensor coordinates, one fixed hand configuration.",
+      "flat": "Orthographic projection of the saved coordinates; visualization only."
+    },
+    "socks": {
+      "flat": "Source planar physical sensor map; right foot mirrored for separated display.",
+      "spatial": "Illustrative curved sole with an arch, cupped rim and toe bend; not measured anatomy."
+    },
+    "deco": {
+      "flat": "Canonical planar layout used by the repository graph builder. Edge weights remain topological unit distances.",
+      "spatial": "Illustrative palm cup and bent fingers; not calibrated kinematics or a measured hand pose."
+    },
+    "invariants": "Both layouts preserve node IDs, graph edges, target/context membership and reported results."
+  }
+}
