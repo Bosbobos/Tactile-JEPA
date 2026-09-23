@@ -53,3 +53,7 @@ Flat / 3D changes display coordinates only. Socks and DECO 3D shapes are illustr
 The Sber AI logo is sourced from the [official Sber AI team page](https://developers.sber.ru/kak-v-sbere/teams/sberai). The arXiv, GitHub and Hugging Face SVG icons are from [Simple Icons](https://github.com/simple-icons/simple-icons) (CC0). Brand marks remain the property of their respective owners.
 
 The preserved `/interactive-v1/` page has its own HTML, stylesheet and renderer; it reuses the unchanged geometry and image assets. The main page pairs the teaser with the abstract and paper/code/checkpoint links, with the Sber AI mark under the affiliations. Abstract percentages are reported in arXiv:2609.24385v1 (20.8% orientation error and 6.3% force error reductions).
+
+## Preserved plain edition
+
+`/academic-plain/` preserves the published academic version from commit `a1027aa`, including its own styles and renderer. It shares only the unchanged data and image assets. The main edition keeps the paper typography while using a compact figure-control margin and understated blue accents.
