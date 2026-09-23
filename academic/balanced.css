@@ -281,14 +281,14 @@ body:has([data-dataset="deco"][aria-pressed="true"]){--dataset-ink:#79509d;--dat
 .bar-row[data-method="BYOL"]{--method-colour:#d5a34f}
 .bar-row[data-method="MAE"]{--method-colour:#66a38f}
 .bar-row[data-method="DINO"]{--method-colour:#9c83bd}
-.bar-row[data-method="Tactile-JEPA"]{--method-colour:#bc5868}
+.bar-row[data-method="Tactile-JEPA"]{--method-colour:#358459}
 .bar,.ours .bar{background:var(--method-colour)}
-.bar-row.ours{color:#9c3a4e}
+.bar-row.ours{color:#286342}
 .bar-row:hover{background:#faf7f6}
 .bar-whisker,.bar-whisker::before,.bar-whisker::after{background:#43434a}
-.result-insight{border-color:#e1bdc4}
-.result-insight strong,.result-insight h3{color:#a73d50}
-.insight-label{color:#866b71}
+.result-insight{border-color:#b9d6c3}
+.result-insight strong,.result-insight h3{color:#286c46}
+.insight-label{color:#647a6c}
 .ablation .ours td{background:#fff9f2}
 .ablation .ours td:first-child{border-left-color:#d1a359}
 .ablation td.best,.ablation .ours td.best{background:#edf6ef;color:#316b4b}
@@ -297,7 +297,7 @@ body:has([data-dataset="deco"][aria-pressed="true"]){--dataset-ink:#79509d;--dat
 .recipe-key i{background:#756687}
 @media(max-width:1000px){.dataset-profile>img{width:88px}}
 @media(max-width:850px){.mask-presets .mode-switch button[aria-pressed=true]{border-bottom-color:var(--dataset-ink)}}
-@media(max-width:760px){.result-insight{border-top-color:#e1bdc4}}
+@media(max-width:760px){.result-insight{border-top-color:#b9d6c3}}
 @media(max-width:620px){
 .dataset-profiles{display:grid;grid-template-columns:1fr;gap:12px}
 .dataset-profile,.dataset-profile:first-child,.dataset-profile:last-child{padding:16px;border:0;border-left:2px solid var(--identity-rule)}
