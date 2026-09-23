@@ -38,7 +38,7 @@ node scripts/check-layouts.mjs
 
 ## Academic page
 
-The academic edition is the public entry point. Its dataset selector controls the graph and the bar chart together. The main controls expose target strategy, sampling playback, layout and target/context visibility; optional settings are in the Customize dialog. Four target colours and local/global marker shapes distinguish overlapping masks. Display settings do not alter reported experimental scores.
+The academic edition is the public entry point. It follows a restrained paper-page layout, with serif typography, ruled sections and standard data tables. Its dataset selector controls the graph and results together; target strategy, sampling playback, layout and target/context controls stay close to the figure. Four muted target colours and local/global marker shapes distinguish overlapping masks. Display settings do not alter reported experimental scores.
 
 The paper and author affiliations are linked to [arXiv:2609.24385](https://arxiv.org/abs/2609.24385). The research code is at [E-Kovtun/tactile](https://github.com/E-Kovtun/tactile); this repository hosts only the website.
 

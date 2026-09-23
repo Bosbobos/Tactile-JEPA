@@ -1,0 +1,129 @@
+:root{--paper-ink:#202020;--paper-muted:#666;--paper-rule:#b8b8b8;--paper-soft-rule:#d5d5d5;--paper-link:#185a87;--graph-context:#a0a6aa;--graph-unused:#dedfdf;--graph-edge:#92999d80;--graph-local:#974c3e;--graph-global:#426779;--graph-label:#454545}
+body{color:var(--paper-ink);background:#fff;font:17px/1.62 Georgia,"Times New Roman",serif}
+h1,h2,h3{color:var(--paper-ink);font-family:Georgia,"Times New Roman",serif}
+.paper-header{max-width:980px;margin-top:32px;margin-bottom:25px}
+.paper-header h1{font:600 30px/1.28 Georgia,"Times New Roman",serif;letter-spacing:0}
+.paper-name{font:inherit;letter-spacing:inherit}.paper-name::after{content:": "}.paper-title{font:inherit;letter-spacing:inherit}
+.author-line{font:16px/1.55 Georgia,"Times New Roman",serif}.affiliations{font:13px/1.5 Georgia,"Times New Roman",serif;color:#444}
+.affiliation-brand{margin-top:8px}.affiliation-brand .sber-logo{width:105px}
+.paper-overview{max-width:980px;grid-template-columns:minmax(250px,.78fr) minmax(0,1.4fr);gap:38px;margin-bottom:30px}
+.paper-overview .teaser-figure{max-width:350px}.paper-overview figcaption{font:13px/1.5 Georgia,"Times New Roman",serif;color:#555}
+.overview-text h2{font:600 22px/1.35 Georgia,"Times New Roman",serif;text-align:left;margin-bottom:8px}
+.overview-text .abstract{font:16px/1.58 Georgia,"Times New Roman",serif;color:#252525}
+.overview-text .paper-links{justify-content:flex-start;gap:17px;margin-top:15px}
+.paper-links a{padding:2px 0;border:0;border-radius:0;background:transparent;color:var(--paper-link);font:14px/1.5 Georgia,"Times New Roman",serif;text-decoration:underline;text-underline-offset:2px}
+.paper-links a:hover{background:transparent;border:0;color:#103c5e}.paper-links img{width:16px;height:16px;opacity:.8}
+.study-explorer{max-width:1160px;margin:0 auto}
+.explore-intro{display:block;margin-bottom:13px;padding-bottom:9px;border-bottom:1px solid var(--paper-rule)}
+.explore-intro h2{font:600 23px/1.35 Georgia,"Times New Roman",serif;margin:0 0 5px}
+.explore-intro p{font:14px/1.5 Georgia,"Times New Roman",serif;color:#444;margin:0}
+.explore-intro strong{color:inherit;font-weight:600}.method-link{color:var(--paper-link);font:13px Georgia,"Times New Roman",serif}
+.study-frame{border:0;border-top:1px solid var(--paper-rule);border-bottom:1px solid var(--paper-rule);border-radius:0}
+.dataset-bar{position:static;z-index:auto;min-height:43px;padding:0 3px;gap:18px;background:#fff;border-bottom:1px solid var(--paper-soft-rule);border-radius:0;font-family:Georgia,"Times New Roman",serif}
+.dataset-label{font:13px Georgia,"Times New Roman",serif;color:#444}.dataset-tabs{gap:18px}
+.dataset-tabs button{flex:0 1 auto;padding:8px 2px 7px;border:0;border-bottom:1px solid transparent;background:#fff;color:var(--paper-link);font:14px Georgia,"Times New Roman",serif}
+.dataset-tabs button[aria-pressed=true]{color:#111;background:#fff;border-color:#333;font-weight:600}
+.dataset-tabs button:hover{background:#fff;text-decoration:underline}.tab-detail{font:11px Georgia,"Times New Roman",serif;color:#666}
+.results-jump{color:var(--paper-link);font:13px Georgia,"Times New Roman",serif}
+.explorer-body{display:flex;flex-direction:column;border:0}.viewport{order:2;min-height:0;background:#fff;border:0}
+.view-top{padding:8px 4px 4px;color:#444;font:11px Georgia,"Times New Roman",serif;letter-spacing:0}
+.subtle{color:var(--paper-link);font:12px Georgia,"Times New Roman",serif;text-decoration:underline;text-underline-offset:2px}
+.graph-toolbar{justify-content:flex-start;gap:28px;padding:4px}
+.layout-switch{font:12px Georgia,"Times New Roman",serif}.layout-switch legend{color:#333}
+.layout-switch label{padding:2px 7px;border-color:#aaa;font:12px Georgia,"Times New Roman",serif;color:#333}
+.layout-switch label:has(input:checked){color:#111;background:#f0f0f0}
+.layout-switch input,.layer-controls input{accent-color:#444}.layer-controls{gap:15px;font:12px Georgia,"Times New Roman",serif}
+#graph{height:390px;min-height:300px}
+.view-bottom{padding:2px 4px 8px;color:#555;font:11px Georgia,"Times New Roman",serif}
+.legend{justify-content:flex-start;gap:8px 17px;padding:8px 4px;background:#fff;border-top:1px solid var(--paper-soft-rule);font:12px Georgia,"Times New Roman",serif;color:#333}
+.legend .shape{width:8px;height:8px}.legend .context-key i{background:var(--graph-context)}
+.legend .unselected-key i{background:var(--graph-unused);border:1px solid #aaa}
+#geometry-note{padding:7px 4px 9px;background:#fff;color:#555;font:12px/1.5 Georgia,"Times New Roman",serif}
+#geometry-note strong{color:#333;font:12px Georgia,"Times New Roman",serif}
+.mask-panel{order:1;display:grid;grid-template-columns:minmax(175px,1fr) auto minmax(275px,auto);grid-template-areas:"title play presets" "copy status presets" "stats actions note";align-items:center;gap:2px 22px;padding:10px 4px 11px;border:0;border-bottom:1px solid var(--paper-soft-rule);background:#fff;color:#222;font:13px/1.45 Georgia,"Times New Roman",serif}
+.mask-panel .panel-kicker{display:none}.mask-panel h3{grid-area:title;margin:0;font:600 15px/1.35 Georgia,"Times New Roman",serif}
+.mask-panel #mode-copy{grid-area:copy;margin:2px 0 0;color:#555;font:12px/1.4 Georgia,"Times New Roman",serif}
+.mask-panel .play-button{grid-area:play;width:auto;min-height:31px;padding:4px 10px;border:1px solid #777;border-radius:0;box-shadow:none;background:#fff;color:#222;font:13px Georgia,"Times New Roman",serif}
+.mask-panel .play-button::before{font-size:10px}.mask-panel .play-button:hover:not(:disabled){transform:none;box-shadow:none;background:#f3f3f3}
+.mask-panel .play-button:disabled{background:#fff;color:#888}
+.mask-panel .sampling-status{grid-area:status;min-height:0;margin:1px 0 0;color:#666;font:11px/1.4 Georgia,"Times New Roman",serif}
+.mask-presets{grid-area:presets;justify-self:end}.mask-presets legend{padding:0;color:#444;font:12px Georgia,"Times New Roman",serif}
+.mask-presets .mode-switch{gap:11px;margin:4px 0 0}
+.mode-switch button,.mode-switch button+button{padding:3px 1px;border:0;border-bottom:1px solid transparent;border-radius:0;background:#fff;color:var(--paper-link);font:13px Georgia,"Times New Roman",serif}
+.mode-switch button[aria-pressed=true]{border-color:#333;background:#fff;color:#111;font-weight:600}
+.mode-switch button span{color:#555;font:11px Georgia,"Times New Roman",serif}
+.mask-panel .sampling-actions{grid-area:actions;justify-content:flex-start;gap:13px}
+.mask-panel .secondary,.mask-panel .customize-button{padding:1px 0;border:0;border-radius:0;background:transparent;color:var(--paper-link);font:12px Georgia,"Times New Roman",serif;text-decoration:underline;text-underline-offset:2px}
+.customize-button span{color:#666;font:11px Georgia,"Times New Roman",serif}
+.mask-panel .mask-stats{grid-area:stats;gap:12px;margin:0;padding:0;border:0;color:#555;font:11px Georgia,"Times New Roman",serif}
+.mask-stats strong{color:#222;font:600 14px Georgia,"Times New Roman",serif}
+.mask-panel .control-note{grid-area:note;margin:0;color:#666;font:10px/1.4 Georgia,"Times New Roman",serif}
+.results{padding:17px 4px 21px;scroll-margin-top:20px}.results .section-top{align-items:center;margin-bottom:3px}
+.results .eyebrow{color:#555;font:12px Georgia,"Times New Roman",serif;letter-spacing:0}
+.results h2{font:600 21px/1.4 Georgia,"Times New Roman",serif}.results-label{color:#444;font:16px Georgia,"Times New Roman",serif}
+.results-context{margin:5px 0 16px;color:#444;font:13px/1.5 Georgia,"Times New Roman",serif}
+.metric-select{color:#333;font:13px Georgia,"Times New Roman",serif}
+.metric-select select{padding:3px 20px 3px 6px;border:1px solid #aaa;border-radius:0;background:#fff;color:#222;font:13px Georgia,"Times New Roman",serif}
+.results-layout{grid-template-columns:minmax(0,1fr) 205px;gap:25px}
+.chart-title{margin-bottom:10px}.chart-title h3{font:600 16px Georgia,"Times New Roman",serif}
+.chart-title>span{color:#444;font:12px Georgia,"Times New Roman",serif}
+.bar-row{grid-template-columns:106px minmax(70px,1fr) 138px;gap:9px;margin:9px 0;color:#222;font:12px/1.4 Georgia,"Times New Roman",serif}
+.bar-track{height:12px;background:#f1f1f1;border-radius:0;background-image:none}.bar{background:#a9adb0}
+.ours .bar{background:#343a3d}.bar-whisker,.bar-whisker::before,.bar-whisker::after{background:#222}
+.bar-row.ours{font-weight:600}.bar-value{font-variant-numeric:tabular-nums}
+.result-insight{padding-left:16px;border-color:var(--paper-soft-rule);color:#444;font:13px/1.5 Georgia,"Times New Roman",serif}
+.result-insight strong{color:#222;font:600 25px/1.2 Georgia,"Times New Roman",serif;letter-spacing:0}
+.result-insight h3{margin:4px 0 8px;color:#333;font:600 14px Georgia,"Times New Roman",serif}
+.results .fine-print,.fine-print{color:#555;font:12px/1.5 Georgia,"Times New Roman",serif}
+.paper-section{margin:34px 0}.paper-section h2,.ablation h2{margin-bottom:9px;font:600 22px/1.4 Georgia,"Times New Roman",serif}
+.paper-section>p,.ablation>p{max-width:none;margin:10px 0;font:16px/1.62 Georgia,"Times New Roman",serif}
+.dataset-table,.ablation table{min-width:0;font:14px/1.5 Georgia,"Times New Roman",serif;text-align:left}
+.dataset-table th,.dataset-table td,.ablation th,.ablation td{padding:7px 10px;border-bottom:1px solid var(--paper-soft-rule);text-align:left}
+.dataset-table thead th,.ablation thead th{border-top:1px solid #777;border-bottom:1px solid #777;font-weight:600}
+.dataset-table tbody tr:last-child td,.ablation tbody tr:last-child td{border-bottom:1px solid #777}
+.dataset-table tbody tr,.ablation tbody tr,.ablation .ours{background:#fff}
+.ablation{margin-top:35px;border-top:0}.ablation caption{padding:0 0 5px;text-align:left;font:13px Georgia,"Times New Roman",serif}
+.ablation .fine-print{font:12px/1.5 Georgia,"Times New Roman",serif}.table-scroll{overflow-x:auto}
+.paper-footer{border-color:var(--paper-rule);color:#555;font:13px Georgia,"Times New Roman",serif}.paper-footer a{color:var(--paper-link)}
+#sampling-dialog{border-radius:0;box-shadow:0 7px 28px #0002;font-family:Georgia,"Times New Roman",serif}
+#sampling-dialog::backdrop{background:#0005;backdrop-filter:none}
+.settings-header h2,.settings-intro,.detail-fields label,.detail-fields legend,.settings-footer{font-family:Georgia,"Times New Roman",serif}
+.detail-fields select{border-radius:0;font-family:Georgia,"Times New Roman",serif}
+@media(max-width:850px){
+.mask-panel{grid-template-columns:minmax(145px,1fr) auto;grid-template-areas:"title presets" "copy presets" "play status" "stats actions" "note note";gap:5px 13px}
+.mask-panel .play-button,.mask-panel .sampling-status{justify-self:start}
+.mask-panel .mask-stats{justify-content:start}.mask-panel .sampling-actions{justify-content:start}
+.results-layout{grid-template-columns:1fr;gap:14px}.result-insight{border-left:0;border-top:1px solid var(--paper-soft-rule);padding:10px 0 0}
+#graph{height:350px}.paper-overview{gap:25px}
+}
+@media(max-width:620px){
+.paper-header{margin-top:22px}.paper-header h1{font-size:23px}
+.paper-overview{grid-template-columns:1fr;gap:15px}.paper-overview .teaser-figure{max-width:285px}
+.overview-text h2{text-align:left}.dataset-bar{gap:7px;padding:0 2px}
+.dataset-tabs{justify-content:space-between;gap:4px}.dataset-tabs button{padding:7px 2px;font-size:12px}
+.tab-detail{display:none}.results-jump{font-size:11px}
+.mask-panel{grid-template-columns:minmax(120px,1fr) auto;gap:6px 8px;padding:9px 3px}
+.mask-presets .mode-switch{gap:8px}.mode-switch button{font-size:12px}.mode-switch button span{font-size:10px}
+.graph-toolbar{gap:13px;padding:4px 2px}.layer-controls{gap:9px}#graph{height:310px}
+.legend{gap:7px 10px;font-size:11px}.results{padding-right:1px;padding-left:1px}
+.bar-row{grid-template-columns:78px minmax(30px,1fr) 111px;gap:5px;font-size:10px}.bar-track{height:10px}
+.bar-whisker{top:4px}.dataset-table{min-width:525px}.ablation table{min-width:645px}
+.paper-footer{gap:12px}
+}
+
+body[data-edition="academic"] {
+  --graph-context: #a0a6aa;
+  --graph-unused: #dedfdf;
+  --graph-edge: #92999d80;
+  --graph-local: #974c3e;
+  --graph-global: #426779;
+  --graph-label: #454545;
+}
+.explore-intro { border-bottom: 0; }
+.results-layout{display:block}
+.result-insight{margin-top:10px;padding:8px 0 0;border:0;border-top:1px solid var(--paper-soft-rule)}
+.result-insight strong{margin-right:8px;font-size:15px;vertical-align:baseline}
+.result-insight h3{display:inline;margin:0;font-size:13px}
+.result-insight p{display:inline;margin-left:7px;font-size:12px}
+@media(max-width:850px){.results-layout{display:block}.result-insight{padding:8px 0 0;border:0;border-top:1px solid var(--paper-soft-rule)}}
+.hover-info{border:1px solid #888;border-radius:0;box-shadow:none;background:#fff;color:#222;font:12px Georgia,"Times New Roman",serif}
