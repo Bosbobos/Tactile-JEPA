@@ -303,3 +303,7 @@ body:has([data-dataset="deco"][aria-pressed="true"]){--dataset-ink:#79509d;--dat
 .dataset-profile,.dataset-profile:first-child,.dataset-profile:last-child{padding:16px;border:0;border-left:2px solid var(--identity-rule)}
 .dataset-profile>img{width:84px}
 }
+
+/* Context remains quiet, but distinct from nodes outside the visible context. */
+body[data-refinement="figure"]{--graph-context:#718996;--graph-unused:#e0e2e3}
+.legend .unselected-key i{border-color:#c6cbce}
