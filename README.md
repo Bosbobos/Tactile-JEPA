@@ -10,6 +10,8 @@ Expected address: https://bosbobos.github.io/Tactile-JEPA/
 
 - / — academic edition (main page)
 - /academic/ — academic edition alias
+- /academic-balanced/ — preserved balanced edition (commit 2536c24)
+- /academic-plain/ — preserved plain academic edition (commit a1027aa)
 - /interactive-v1/ — preserved version before the paper-style introduction update (commit eb26791)
 - /original/ — archived presentation edition
 - /editorial/ — archived editorial edition
@@ -57,3 +59,7 @@ The preserved `/interactive-v1/` page has its own HTML, stylesheet and renderer;
 ## Preserved plain edition
 
 `/academic-plain/` preserves the published academic version from commit `a1027aa`, including its own styles and renderer. It shares only the unchanged data and image assets. The main edition keeps the paper typography while using a compact figure-control margin and understated blue accents.
+
+## Preserved balanced edition
+
+`/academic-balanced/` preserves commit `2536c24` with its own styles, renderer and layout code. The main page adds dataset thumbnails derived from the flat sensor coordinates, a clearer target palette and brief result transitions. Reduced-motion preferences disable these transitions. Numerical results, graph adjacency and sampling remain unchanged.
