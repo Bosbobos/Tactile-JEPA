@@ -22,6 +22,13 @@
 <div class="study-frame">
 <div class="dataset-bar"><span class="dataset-label">Dataset</span><div class="dataset-tabs" role="group" aria-label="Dataset for graph and results"><button data-dataset="xela" aria-pressed="true">Sparsh-skin<span class="tab-detail">368 sensors · one hand</span></button><button data-dataset="socks" aria-pressed="false">Tactile Socks<span class="tab-detail">453 sensors · two feet</span></button><button data-dataset="deco" aria-pressed="false">DECO-50<span class="tab-detail">528 nodes · two hands</span></button></div><a href="#results" class="results-jump">Results ↓</a></div>
 <div class="explorer-body">
+<aside class="mask-panel" aria-label="Mask sampling controls">
+<div class="sampling-main">
+<fieldset class="mask-presets"><legend>Target masks</legend><div class="mode-switch" role="group" aria-label="Target mask strategy"><button type="button" data-mode="local" aria-pressed="false">4L · Local</button><button type="button" data-mode="mixed" aria-pressed="true">2L+2G · Mixed</button><button type="button" data-mode="global" aria-pressed="false">4G · Global</button></div></fieldset>
+<div class="playback-controls"><div class="sampling-actions"><button type="button" id="animate" class="play-button">Play sampling</button><button type="button" id="resample" class="secondary">New sample</button><button type="button" id="customize" class="customize-button" aria-haspopup="dialog" aria-controls="sampling-dialog">Options <span id="customize-state">optional</span></button></div><p id="sampling-status" class="sampling-status" role="status">Watch targets appear on the graph.</p></div>
+</div>
+<div class="sampling-caption"><div><h3 id="mode-title">Two local + two global targets</h3><p id="mode-copy"></p></div><div id="mask-stats" class="mask-stats" aria-live="polite"></div></div>
+</aside>
 <div class="viewport" id="viewport">
 <div class="view-top"><span id="geometry-tag">368 TAXELS · 3D LAYOUT</span><button id="reset-view" class="subtle" title="Reset camera">Reset view ↺</button></div>
 <div class="graph-toolbar"><fieldset class="layout-switch" aria-describedby="geometry-note"><legend>Layout</legend><label><input type="radio" name="layout" value="flat">Flat</label><label><input type="radio" name="layout" value="spatial" checked>3D</label></fieldset><div class="layer-controls" role="group" aria-label="Graph layers"><label><input id="show-targets" type="checkbox" checked>Targets</label><label><input id="show-context" type="checkbox" checked>Context</label></div></div>
@@ -31,15 +38,8 @@
 <div class="legend" id="target-legend" aria-label="Graph legend"></div>
 <p id="geometry-note" aria-live="polite"></p>
 </div>
-<aside class="mask-panel" aria-label="Mask sampling controls">
-<p class="panel-kicker">GRAPH-BASED MASKING</p><h3 id="mode-title">Two local + two global targets</h3><p id="mode-copy"></p>
-<button id="animate" class="play-button">Play sampling</button><p id="sampling-status" class="sampling-status" role="status">Watch targets appear on the graph.</p>
-<fieldset class="mask-presets"><legend>Target strategy</legend><div class="mode-switch" role="group" aria-label="Target mask strategy"><button data-mode="local" aria-pressed="false">4L<span>Local</span></button><button data-mode="mixed" aria-pressed="true">2L+2G<span>Mixed</span></button><button data-mode="global" aria-pressed="false">4G<span>Global</span></button></div></fieldset>
-<div class="sampling-actions"><button id="resample" class="secondary">↻ New sample</button><button id="customize" class="customize-button" aria-haspopup="dialog" aria-controls="sampling-dialog">Customize<span id="customize-state">optional</span></button></div>
-<div id="mask-stats" class="mask-stats" aria-live="polite"></div>
-<p class="control-note">L = local, connected targets<br>G = global, randomly sampled targets</p>
-</aside></div>
-<section class="results" id="results" aria-labelledby="results-heading"><div class="section-top"><div><p class="eyebrow">RESULTS FOR THE SELECTED DATASET</p><h2 id="results-heading"><span id="result-dataset">SPARSH-SKIN</span> <span class="results-label">/ downstream evaluation</span></h2></div><label class="metric-select">Task<select id="metric"></select></label></div><p class="results-context">Reported experiments from the paper. The mask controls above illustrate sampling and do not change these scores.</p><div class="results-layout"><div class="chart-box"><div class="chart-title"><h3 id="chart-title"></h3><span id="chart-unit"></span></div><div id="chart" aria-live="polite"></div><p class="fine-print" id="metric-note"></p></div><aside class="result-insight"><strong id="result-headline"></strong><h3 id="result-subtitle"></h3><p id="result-copy"></p></aside></div></section>
+</div>
+<section class="results" id="results" aria-labelledby="results-heading"><div class="section-top"><div><p class="eyebrow">RESULTS FOR THE SELECTED DATASET</p><h2 id="results-heading"><span id="result-dataset">SPARSH-SKIN</span> <span class="results-label">/ downstream evaluation</span></h2></div></div><div class="task-picker"><span id="task-label">Downstream task</span><div id="metric-buttons" role="group" aria-labelledby="task-label"></div></div><p class="results-context">Reported experiments from the paper. The mask controls above illustrate sampling and do not change these scores.</p><div class="results-layout"><div class="chart-box"><div class="chart-title"><h3 id="chart-title"></h3><span id="chart-unit"></span></div><div id="chart" aria-live="polite"></div><p class="fine-print" id="metric-note"></p></div><aside class="result-insight"><strong id="result-headline"></strong><h3 id="result-subtitle"></h3><p id="result-copy"></p></aside></div></section>
 </div>
 <div class="graph-footnote"><span id="dataset-description"></span><span id="layout-note"></span></div><p class="fine-print sampling-note">Illustrative masks: 14% per target, 70% initial context. Training varies these budgets. The graph and mask membership stay fixed when switching Flat / 3D.</p>
 </section>

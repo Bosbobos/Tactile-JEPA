@@ -127,3 +127,74 @@ body[data-edition="academic"] {
 .result-insight p{display:inline;margin-left:7px;font-size:12px}
 @media(max-width:850px){.results-layout{display:block}.result-insight{padding:8px 0 0;border:0;border-top:1px solid var(--paper-soft-rule)}}
 .hover-info{border:1px solid #888;border-radius:0;box-shadow:none;background:#fff;color:#222;font:12px Georgia,"Times New Roman",serif}
+
+
+/* Keep the paper's visual language; improve spacing and grouping of controls. */
+.dataset-bar{padding:4px 0;gap:14px}
+.dataset-tabs{gap:8px}
+.dataset-tabs button{min-height:40px;padding:8px 10px;background:white;border-radius:0}
+.dataset-tabs button[aria-pressed=true]{background:white;border-bottom-color:#444}
+.dataset-tabs button:hover{background:white;text-decoration:underline}
+.results-jump{padding:9px 4px}
+.mask-panel{display:block;order:initial;padding:14px 4px 12px}
+.sampling-main{display:flex;align-items:flex-start;justify-content:space-between;gap:12px 24px;flex-wrap:wrap}
+.mask-presets{justify-self:auto;flex:0 0 auto}
+.mask-presets legend{font:13px/1.4 Georgia,"Times New Roman",serif;color:#444;margin-bottom:4px}
+.mask-presets .mode-switch{display:flex;gap:6px;margin:0}
+.mask-presets .mode-switch button,.mask-presets .mode-switch button+button{flex:0 0 auto;min-height:38px;padding:8px 10px;border:0;border-bottom:1px solid transparent;border-radius:0;background:white;color:var(--paper-link);font:13px/1.4 Georgia,"Times New Roman",serif;white-space:nowrap}
+.mask-presets .mode-switch button[aria-pressed=true]{color:#111;border-bottom-color:#444;background:white;font-weight:600}
+.mask-presets .mode-switch button:hover{background:white;text-decoration:underline}
+.playback-controls{padding-top:22px;min-width:0}
+.mask-panel .sampling-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.mask-panel .sampling-actions button{min-height:36px;padding:6px 10px;border:1px solid #aaa;border-radius:0;background:white;color:#333;font:13px/1.4 Georgia,"Times New Roman",serif;text-decoration:none;box-shadow:none;white-space:nowrap}
+.mask-panel .sampling-actions button:hover:not(:disabled){background:#fafafa;border-color:#555;transform:none;box-shadow:none}
+.mask-panel .sampling-actions .play-button{display:inline-flex;gap:8px;justify-content:center;width:auto;min-width:132px;border-color:#666;font-weight:600}
+.mask-panel .sampling-actions .play-button:disabled{opacity:.45;cursor:not-allowed}
+.mask-panel .customize-button span{display:inline;margin-left:4px;color:#777;font:11px Georgia,"Times New Roman",serif}
+.mask-panel p.sampling-status{font:12px/1.4 Georgia,"Times New Roman",serif;min-height:17px;color:#666;margin:5px 0 0}
+.sampling-caption{display:flex;align-items:baseline;justify-content:space-between;gap:8px 20px;margin-top:10px}
+.mask-panel .sampling-caption h3{display:inline;margin:0 7px 0 0;font:600 13px/1.5 Georgia,"Times New Roman",serif}
+.mask-panel .sampling-caption #mode-copy{display:inline;margin:0;color:#666;font:12px/1.5 Georgia,"Times New Roman",serif}
+.mask-panel .mask-stats{display:flex;gap:12px;flex-shrink:0;margin:0;padding:0;border:0;color:#666;font:11px/1.5 Georgia,"Times New Roman",serif}
+.mask-stats>div{display:flex;align-items:baseline;gap:4px}
+.mask-panel .mask-stats strong{font:600 12px Georgia,"Times New Roman",serif}
+.graph-toolbar{gap:12px 24px;flex-wrap:wrap;padding:4px}
+.layout-switch legend{padding:7px 0}
+.layout-switch label,.layout-switch label+label{padding:6px 9px;min-height:36px;border:0;background:white;cursor:pointer}
+.layout-switch label:has(input:checked){background:white}
+.layer-controls{gap:6px;flex-wrap:wrap}
+.layer-controls label{padding:7px;min-height:36px;cursor:pointer}
+.view-top .subtle,.view-bottom .subtle{min-height:34px;padding:7px 8px}
+.task-picker{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 16px;margin:12px 0 10px}
+#task-label{font:13px Georgia,"Times New Roman",serif;color:#555}
+#metric-buttons{display:flex;flex-wrap:wrap;gap:5px 12px}
+#metric-buttons button{min-height:38px;padding:8px 6px;border:0;border-bottom:1px solid transparent;border-radius:0;background:white;color:var(--paper-link);font:14px/1.4 Georgia,"Times New Roman",serif;cursor:pointer}
+#metric-buttons button[aria-pressed=true]{color:#111;font-weight:600;border-bottom-color:#444}
+#metric-buttons button:hover{text-decoration:underline;background:white}
+.study-explorer button:focus-visible{outline:2px solid #777;outline-offset:3px}
+/* Centre the reported interval on the bar at every responsive height. */
+.bar-whisker{top:50%;height:1px;transform:translateY(-50%)}
+.bar-whisker::before,.bar-whisker::after{top:50%;height:8px;width:1px;transform:translateY(-50%)}
+@media(max-width:850px){
+.playback-controls{padding-top:0}
+.sampling-caption{flex-wrap:wrap;gap:5px}
+.mask-panel .sampling-caption h3,.mask-panel .sampling-caption #mode-copy{display:inline}
+}
+@media(max-width:620px){
+.dataset-bar{gap:4px}.dataset-tabs{gap:3px;flex-wrap:nowrap}
+.dataset-tabs button{padding:8px 5px;min-height:42px;font-size:12px;white-space:nowrap}
+.results-jump{padding:9px 3px;font-size:11px}
+.mask-panel{padding:12px 0}.sampling-main{display:block}
+.mask-presets{width:100%}.mask-presets .mode-switch{gap:0;justify-content:space-between}
+.mask-presets .mode-switch button{min-height:42px;padding:8px 8px;font-size:13px}
+.playback-controls{padding-top:12px}.mask-panel .sampling-actions{gap:7px}
+.mask-panel .sampling-actions button{min-height:40px;padding:7px 8px;font-size:13px}
+.mask-panel .sampling-actions .play-button{min-width:124px}
+.mask-panel .customize-button span{display:none}
+.mask-panel .mask-stats{flex-shrink:1;flex-wrap:wrap}
+.graph-toolbar{gap:4px 10px}.layer-controls{gap:0}.layer-controls label{padding:7px 5px}
+#metric-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:4px 14px}
+#metric-buttons button{min-height:44px;font-size:13px;text-align:left;padding:8px 2px}
+#metric-buttons button:only-child{grid-column:1 / -1;justify-self:start}
+}
+@media(max-width:620px){.mask-panel .customize-button span{display:inline;margin-left:2px;font-size:10px}}
