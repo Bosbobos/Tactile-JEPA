@@ -65,3 +65,5 @@ The preserved `/interactive-v1/` page has its own HTML, stylesheet and renderer;
 `/academic-balanced/` preserves commit `2536c24` with its own styles, renderer and layout code. The main page adds dataset thumbnails derived from the flat sensor coordinates, a clearer target palette and brief result transitions. Reduced-motion preferences disable these transitions. Numerical results, graph adjacency and sampling remain unchanged.
 
 The current academic page places task-specific result commentary beside the bar chart on wider screens. Illustrated dataset profiles link to the corresponding explorer view. Ablation glyphs distinguish local and global targets; highlighted cells mark the best reported mean within each column, without implying statistical significance.
+
+The colour system distinguishes dataset identity (blue / terracotta / violet), individual targets, and compared methods. Method colours stay constant across tasks; target colours stay constant across datasets. Text labels and marker shapes remain available alongside colour. Preserved editions retain their original monochrome sketch assets.

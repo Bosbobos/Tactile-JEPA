@@ -240,3 +240,66 @@ body[data-refinement="figure"]{--target-1:#ac5145;--target-2:#357e9b;--target-3:
 .dataset-profile .sensor-count{margin-bottom:3px}
 .ablation table{min-width:665px}.ablation th,.ablation td{padding:12px 10px}
 }
+
+/* Separate colour roles: dataset identity, target identity, and method identity. */
+body[data-refinement="figure"]{--target-1:#c6573c;--target-2:#148ca5;--target-3:#c99a23;--target-4:#885cb4;--figure-accent:#2866a4;--dataset-ink:#2866a4;--dataset-soft:#edf4fc;--dataset-rule:#abc6e4;--paper-link:#2866a4}
+body:has([data-dataset="socks"][aria-pressed="true"]){--dataset-ink:#985025;--dataset-soft:#fff3e9;--dataset-rule:#e0b594}
+body:has([data-dataset="deco"][aria-pressed="true"]){--dataset-ink:#79509d;--dataset-soft:#f5effb;--dataset-rule:#cbb6e0}
+.paper-name{color:#ad3e4c}
+.paper-links a:first-child{background:#ad3e4c;border-color:#ad3e4c}
+.paper-links a:first-child:hover{background:#91313e;border-color:#91313e}
+.paper-links a:nth-child(2){background:#30343b;border-color:#30343b;color:white}
+.paper-links a:nth-child(2) img{filter:brightness(0) invert(1);opacity:1}
+.paper-links a:nth-child(2):hover{background:#454a53;border-color:#454a53;color:white}
+.paper-links a:nth-child(3){background:#ffefb6;border-color:#e4c66b;color:#694d16}
+.paper-links a:nth-child(3):hover{background:#ffe598;border-color:#d4ae44;color:#563e0e}
+[data-dataset="xela"],[data-profile="xela"]{--identity:#2866a4;--identity-soft:#f0f6fe;--identity-rule:#bdd1e9}
+[data-dataset="socks"],[data-profile="socks"]{--identity:#985025;--identity-soft:#fff5ec;--identity-rule:#e5c4a9}
+[data-dataset="deco"],[data-profile="deco"]{--identity:#79509d;--identity-soft:#f7f1fc;--identity-rule:#d5c1e8}
+.dataset-tabs button{color:var(--identity)}
+.dataset-tabs button[aria-pressed=true]{color:var(--identity);border-bottom-color:var(--identity)}
+.dataset-tabs button:hover{color:var(--identity)}
+.dataset-sketch{opacity:.8;filter:none}
+.dataset-tabs button[aria-pressed=true] .dataset-sketch,.dataset-tabs button:hover .dataset-sketch{opacity:1;filter:none}
+.dataset-profile{background:var(--identity-soft)}
+.dataset-profiles{padding:0;border:0;gap:16px}
+.dataset-profile,.dataset-profile:first-child,.dataset-profile:last-child{padding:20px 16px;border:0;border-top:2px solid var(--identity-rule)}
+.dataset-profile>img{width:76px}
+.dataset-profile h3,.dataset-profile .sensor-count,.dataset-profile a{color:var(--identity)}
+.dataset-profile a{border-color:var(--identity-rule)}
+.dataset-profile a:hover{color:var(--identity);border-color:var(--identity)}
+.mask-presets .mode-switch button[aria-pressed=true]{background:var(--dataset-soft);color:var(--dataset-ink);border-left-color:var(--dataset-ink)}
+.mask-panel .sampling-actions .play-button{background:var(--dataset-soft);color:var(--dataset-ink);border-color:var(--dataset-rule)}
+.mask-panel .sampling-actions .play-button:hover:not(:disabled),.mask-panel .sampling-actions .play-button.is-playing{background:var(--dataset-soft);border-color:var(--dataset-ink);color:var(--dataset-ink)}
+.layout-switch input,.layer-controls input{accent-color:var(--dataset-ink)}
+#metric-buttons button[aria-pressed=true],#metric-buttons button:hover{border-bottom-color:var(--dataset-ink);color:var(--dataset-ink)}
+#result-dataset{color:var(--dataset-ink)}
+#graph{background:#fff}
+.bar-row{--method-colour:#9ca5ae}
+.bar-row[data-method="Vision only"]{--method-colour:#a6adb5}
+.bar-row[data-method="Random features"]{--method-colour:#b7aaa0}
+.bar-row[data-method="BYOL"]{--method-colour:#d5a34f}
+.bar-row[data-method="MAE"]{--method-colour:#66a38f}
+.bar-row[data-method="DINO"]{--method-colour:#9c83bd}
+.bar-row[data-method="Tactile-JEPA"]{--method-colour:#bc5868}
+.bar,.ours .bar{background:var(--method-colour)}
+.bar-row.ours{color:#9c3a4e}
+.bar-row:hover{background:#faf7f6}
+.bar-whisker,.bar-whisker::before,.bar-whisker::after{background:#43434a}
+.result-insight{border-color:#e1bdc4}
+.result-insight strong,.result-insight h3{color:#a73d50}
+.insight-label{color:#866b71}
+.ablation .ours td{background:#fff9f2}
+.ablation .ours td:first-child{border-left-color:#d1a359}
+.ablation td.best,.ablation .ours td.best{background:#edf6ef;color:#316b4b}
+.ablation tbody tr:hover td.best{background:#e3f0e6}
+.ablation tbody tr:hover td:not(.best){background:#faf7f0}
+.recipe-key i{background:#756687}
+@media(max-width:1000px){.dataset-profile>img{width:88px}}
+@media(max-width:850px){.mask-presets .mode-switch button[aria-pressed=true]{border-bottom-color:var(--dataset-ink)}}
+@media(max-width:760px){.result-insight{border-top-color:#e1bdc4}}
+@media(max-width:620px){
+.dataset-profiles{display:grid;grid-template-columns:1fr;gap:12px}
+.dataset-profile,.dataset-profile:first-child,.dataset-profile:last-child{padding:16px;border:0;border-left:2px solid var(--identity-rule)}
+.dataset-profile>img{width:84px}
+}

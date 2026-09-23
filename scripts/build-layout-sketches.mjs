@@ -8,4 +8,6 @@ for (const key of ['xela','socks','deco']) {
  const scale=42/Math.max(...box.map(([a,b])=>b-a));
  const dots=points.map(([x,y])=>`<circle cx="${(24+(x-(box[0][0]+box[0][1])/2)*scale).toFixed(2)}" cy="${(24-(y-(box[1][0]+box[1][1])/2)*scale).toFixed(2)}" r="0.57"/>`).join('');
  fs.writeFileSync(new URL(`../images/layout-${key}.svg`,import.meta.url),`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g fill="#426f80">${dots}</g></svg>\n`);
+ const colour={xela:'#286fba',socks:'#b76638',deco:'#825bb3'}[key];
+ fs.writeFileSync(new URL(`../images/layout-${key}-color.svg`,import.meta.url),`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g fill="${colour}">${dots}</g></svg>\n`);
 }
