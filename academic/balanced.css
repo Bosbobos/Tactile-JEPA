@@ -279,7 +279,7 @@ body:has([data-dataset="deco"][aria-pressed="true"]){--dataset-ink:#79509d;--dat
 .bar-row[data-method="Vision only"]{--method-colour:#a6adb5}
 .bar-row[data-method="Random features"]{--method-colour:#b7aaa0}
 .bar-row[data-method="BYOL"]{--method-colour:#d5a34f}
-.bar-row[data-method="MAE"]{--method-colour:#66a38f}
+.bar-row[data-method="MAE"]{--method-colour:#bc5868}
 .bar-row[data-method="DINO"]{--method-colour:#9c83bd}
 .bar-row[data-method="Tactile-JEPA"]{--method-colour:#358459}
 .bar,.ours .bar{background:var(--method-colour)}
