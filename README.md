@@ -10,8 +10,8 @@ Expected address: https://bosbobos.github.io/Tactile-JEPA/
 
 - / — academic edition (main page)
 - /academic/ — academic edition alias
-- /original/ — original presentation edition
-- /editorial/ — editorial edition
+- /original/ — archived presentation edition
+- /editorial/ — archived editorial edition
 
 All links are relative and work under the repository's /Tactile-JEPA/ prefix. Shared JavaScript, geometry, masks and images live at the repository root. There is no dependency on the earlier Sites hosting.
 
@@ -35,8 +35,18 @@ node scripts/check-data.mjs
 node scripts/check-layouts.mjs
 ```
 
+## Academic page
+
+The academic edition is the public entry point. Its dataset selector controls the graph and the bar chart together. The main controls expose target strategy, sampling playback, layout and target/context visibility; optional settings are in the Customize dialog. Four target colours and local/global marker shapes distinguish overlapping masks. Display settings do not alter reported experimental scores.
+
+The paper and author affiliations are linked to [arXiv:2609.24385](https://arxiv.org/abs/2609.24385). The research code is at [E-Kovtun/tactile](https://github.com/E-Kovtun/tactile); this repository hosts only the website.
+
 ## Data and figures
 
 See data/provenance.json. The website includes repository sensor graphs and illustrative masks, plus the supplied teaser11.pdf and pretrain2.pdf and their PNG renderings. Results are transcribed from the manuscript. Raw recordings, model checkpoints and training code are not bundled.
 
 Flat / 3D changes display coordinates only. Socks and DECO 3D shapes are illustrative, not measured poses; Xela uses a saved hand geometry. Graph adjacency, node IDs and masks are preserved. The manuscript uses fixed sensor adjacency for mask sampling. Read the provenance notes before changing scientific content.
+
+## Brand assets
+
+The Sber AI logo is sourced from the [official Sber AI team page](https://developers.sber.ru/kak-v-sbere/teams/sberai). The arXiv and GitHub SVG icons are from [Simple Icons](https://github.com/simple-icons/simple-icons) (CC0). Brand marks remain the property of their respective owners.
